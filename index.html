@@ -1,0 +1,83 @@
+<DOCTYPE HTML>
+    <title>Index</title>
+    <style>
+    h1,td {text-align: center;}
+    table, th, td {
+        border:1px solid black;
+      }
+      .main {
+        text-align: center;
+        font-family: "Times New Roman";
+    }
+
+    .marq {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .geek1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+
+    .geek2 {
+        text-align: center;
+    }
+    </style>
+    <body>
+        <div class="main">
+            <marquee class="marq" bgcolor="Green" 
+                     direction="right" loop="">
+                <div class="geek1">
+                    Welcome to Text Analyzer
+                </div>
+                <div class="geek2">
+                    Provide a Text Analyzer Tools
+                </div>
+            </marquee>
+        </div>
+
+    <form  method='get'>
+    <table style="width:100%">
+        <tr>
+          <th>Characters</th>
+          <th>Punctuation</th>
+          <th>Words</th>
+          <th>Sentences</th>
+          <th>Spaces</th>
+
+         
+        </tr>
+        <tr>
+          <td>{{count}}</td>
+          <td>{{punc}}</td>
+          <td>{{word}}</td>  
+          <td>{{sentc}}</td>
+          <td>{{spaces}}</td>
+        </tr>
+      </table>
+    <button type="submit">Check</button>
+  </from>
+    
+    <br>
+      <br>
+      {{data}}
+      <br>
+      <br>
+        
+    <form action='removepun' method='get'>
+    <textarea name="text" style="height: 123px; width: 1349px;"></textarea> 
+    <br>
+    <input type="checkbox" name="buttonrem">Remove Punctuation</input><br>
+    <input type="checkbox" name="buttonspace">Remove Extra Space</input><br>
+    <input type="checkbox" name="buttoncap">Capital String</input>
+    
+    <br>
+    <button type="submit">Analyze</button>
+    </form>
+
+
+    </body> 
+    </html>
